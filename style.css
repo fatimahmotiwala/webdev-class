@@ -1,0 +1,14 @@
+body{background-color: beige;
+}
+h1{
+color:firebrick;
+}
+h2{
+color:firebrick;font-size: larger;
+}
+h3{
+color:firebrick;font-size: smaller;
+}
+p{
+color:darkolivegreen;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
