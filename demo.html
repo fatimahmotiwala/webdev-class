@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="viewport" content ="width=device-width,initial-scale=1.0">
+        <title>Demo</title>
+        <link rel ="stylesheet" href="indexstyle.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to my website</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href ="projects.html">Projects</a>
+            <a href="demo.html">Demos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="layout-wrapper">
+            <main>
+                <h2>Check out my Youtube Videos!</h2>
+                <article>
+                    <div id="player"></div>
+                    <div>
+                        <button onclick="player.playVideo()">Play</button>
+                        <button onclick="player.pauseVideo()">Pause</button>
+                    </div>
+                    <p>A video showing the scenic view of a park</p>    
+                </article>
+            </main>
+        </div>
+        <footer>
+            <p> &copy;2026 Fatimah Motiwala</p>
+        </footer>
+
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script>
+            let player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '390',
+                    width: '640',
+                    videoId: '_O3Sm1XzNp0',
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }});}
+            function onPlayerReady(event) {
+                console.log("Player is ready!");
+            }
+            function onPlayerStateChange(event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                    console.log("Video finished!");
+                }
+            }
+        </script>
+    </body>    
+</html>
