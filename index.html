@@ -1,80 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset ="UTf-8">
-        <meta name="viewport" contect ="width=device-width,initial-scale-=1.0">
+        <meta charset ="UTF-8">
+        <meta name="viewport" content ="width=device-width,initial-scale=1.0">
         <title>My portfolio</title>
-        <style>
-        /* Base Reset */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, sans-serif; background: #f4f4f6; color: #333; line-height: 1.6; }
-
-        /* Typography & Spacing helpers */
-        header, nav, main, aside, footer, article { padding: 20px; border-radius: 8px; margin-bottom: 15px; }
-
-        /* 1. Header & Navigation */
-        header { background: #1e293b; color: white; text-align: center; }
-        nav { background: #3b82f6; display: flex; gap: 20px; justify-content: center; }
-        nav a { color: white; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; font-weight: lighter; }
-
-        /* 2. THE FLEXBOX LAYOUT CONTAINER */
-        /* We use a generic 'div' here because it serves purely for CSS layout alignment */
-        .layout-wrapper {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto 15px auto;
-            padding: 0 10px;
-        }
-
-        /* 3. Main Content Area (Takes 3x space) */
-        main { background: white; flex: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        article { background: #f8fafc; border: 1px solid #e2e8f0; }
-
-        /* 4. Sidebar Area (Takes 1x space) */
-        aside { background: #e2e8f0; flex: 1; height: fit-content; }
-
-        /* 5. Footer */
-        footer { background: #1e293b; color: white; text-align: center; margin-bottom: 0; }
-
-        /* 6. Responsive Breakdown for Mobile Devices */
-        @media (max-width: 768px) {
-            .layout-wrapper {
-                flex-direction: column; /* Stacks sidebar under content on mobile */
-            }
-        }
-    </style>
+        <link rel ="stylesheet" href="indexstyle.css">
     </head>
+    <body>
+        <header>
+            <h1>Welcome to my website</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href ="projects.html">Projects</a>
+            <a href="demo.html">Demos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="layout-wrapper">
+            <main>
+                <h2>Hi!My name is Fatimah Motiwala</h2>
+                <article>
+                    <h3>About Me</h3>
+                    <p>I'm a Computer Science student at Habib University, passionate about the intersection of biotechnology and computing. I'm especially interested in merging my CS degree with biotech and data analytics to build tools that make sense of complex biological data.</p>
+                    <p><strong>Skills:</strong> Python · C++ · SQL · Verilog · Data Analytics · OOP</p>
+                </article>
+            </main>
+            <aside>
+                <h3>Currently Exploring</h3>
+                <p>I'm currently learning about agentic AI.</p>
+            </aside>
+        </div>    
+        <footer>
+            <p> &copy;2026 Fatimah Motiwala</p>
+        </footer>
+    </body>    
 </html>
-<body>
-    <header>
-        <h1>Welcome to the Website</h1>
-    </header>
-</body>
-<nav>
-    <a href="#">Home</a>
-    <a href ="#">Projects</a>
-    <a href="#">Demos</a>
-    <a href="#">Contact</a>
-</nav>
-<div class="layout-wrapper">
-    <main>
-        <h2>Latest Happenings!</h2>
-        <p>Learning web development with modern technologies</p>
-        <article>
-            <h3>An Independent Article</h3>
-            <p>this sub-container holds an independant post or widget that makes sense on its own</p>
-            <p>my garden is blooming with new flowers and fruits!</p>
-            <a href="#">Read more</a>
-        </article>
-    </main>
-    <aside>
-        <h3>Sidebar</h3>
-        <p>Related links,Youtube videos links go here.</p>
-    </aside>
-</div>
-<footer>
-    <p>&copy 2026;Fatimah Motiwala</p>
-</footer>
