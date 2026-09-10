@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>        
+    <script>
+        const bmicalc = function(weight, height) {
+            return weight / (height * height);
+        };
+
+        function getCategory(bmi) {
+            let category;
+            if (bmi < 18.5) category = "Underweight";
+            else if (bmi < 25) category = "Healthy / Normal Weight";
+            else if (bmi < 30) category = "Overweight";
+            else category = "Obese";
+            return category;
+        }
+        function handleOperation(operationName, operationFn) {
+            const height = parseFloat(document.getElementById("num1").value);
+            const weight = parseFloat(document.getElementById("num2").value);
+
+            try {
+                if (isNaN(height) || isNaN(weight)) {
+                    throw new Error("Please enter valid numbers in both fields");
+                }
+                const bmi = operationFn(weight, height); 
+                const category = getCategory(bmi);
+                document.getElementById("result").innerHTML =
+                    operationName + " result: " + bmi.toFixed(2) + " (" + category + ")";
+                console.log(operationName + " (button):", bmi.toFixed(2), category);
+            } catch (err) {
+                document.getElementById("result").innerHTML = "Error: " + err.message;
+                console.log(operationName + " button error:", err.message);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("btnBMI").addEventListener("click", function () {
+                handleOperation("BMI", bmicalc);
+            });
+        });
+    </script>
+    <h1>BMI Calculator</h1>
+    <p>Enter height</p><input type="number" id="num1" placeholder="Enter height">;
+    <p>Enter weight</p><input type="number" id="num2" placeholder="Enter weight">;
+    <button id="btnBMI">Calculate BMI</button>
+    <p id="result"></p>
+    
+</body>
+</html>    
+
