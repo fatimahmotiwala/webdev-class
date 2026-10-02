@@ -8,9 +8,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  box-sizing: border-box;
   padding: 24px;
-  background-color: #f5f7fa;
 }
 
 .profile-column {
